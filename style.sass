@@ -1,0 +1,112 @@
+$colorRed: #D90429
+$colorWhite: #fff
+$colorBlack: #2B2D42
+
+=size($w,$h:$w)
+  width: $w
+  height: $h 
+  
+=ab_center
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+
+*
+  font-family: 'Ubuntu', sans-serif
+  // border: 1px solid #4CC9F0
+
+html,body
+  +size(100%)
+  margin: 0
+  background-color: #eaeaea
+  
+.target
+  +ab_center
+  transition: 1s
+[class^="circle"]
+  +size(500px)
+  border-radius: 50% 
+  +ab_center
+  &.circle1
+    +size(100px)
+    color: $colorWhite
+    z-index: 5 
+  &.circle2
+    +size(200px)
+    color: $colorBlack
+    z-index: 4 
+  &.circle3
+    +size(300px)
+    color: $colorWhite
+    z-index: 3   
+  &.circle4
+    +size(400px)
+    color: $colorBlack
+    z-index: 2 
+  &.circle5
+    +size(500px)
+    color: $colorWhite
+    z-index: 1
+    border: 10px solid #fff
+    box-shadow: 0px 0px 20px rgba(black,0.3)
+  background-color: $colorWhite
+  &:nth-child(2n+1)
+    background-color: $colorRed
+  &:active
+    transition: 0s 
+    filter: brightness(80%)
+  &:before
+    content: attr(data-label)
+    +ab_center
+    top: 20px
+  
+.info
+  position: absolute
+  left: 50px
+  bottom: 50px
+  z-index: 10
+  h1, h3
+    margin: 0
+    color: $colorBlack
+  h1
+    font-size: 50px
+    font-family: 'Train One', cursive
+  h3
+    opacity: 0.5
+    
+.target.moving
+  @keyframes moving
+    0%
+      transform: translate(-200px)
+    100%
+      transform: translate(200px)
+  animation: moving 1s infinite alternate
+  transition: 2s
+
+.mouseCircle
+  +size(45px)
+  pointer-events: none
+  border-radius: 50%
+  border: 2px solid rgba(black,0.3)
+  +ab_center
+  z-index: 99
+  .mouseCross
+    +ab_center
+    pointer-events: none
+    &:before,&:after
+      content: ''
+      display: block
+      +size(15px,1px)
+      +ab_center
+      background-color: $colorBlack
+    &:after
+      transform: translate(-50%,-50%)rotate(90deg)
+
+.shoot
+  position: absolute
+  pointer-events: none
+  +size(10px)
+  border-radius: 50%
+  background-color: rgba(black,0.3)
+  z-index: 50
