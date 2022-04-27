@@ -1,15 +1,20 @@
-# archery-game
-<li>using sass</li>
-<li>javascript</li>
-[ Live Site ](https://chia-liu.github.io/archery-game/)
+# archery-game 🏹
+
+check here [ Live Site ](https://chia-liu.github.io/archery-game/)
 
 ### Screenshot
 
-![](https://ibb.co/h1tY8s9)
+![alt text](https://i.imgur.com/GGollVq.png)
 
 ### How to play
-press mouse to shot
-press K to switch game mode - moving / static
-press R to reset the game
+- press mouse to shot
+- press K to switch game mode - moving / static
+- press R to reset the game
 
-HAVE FUN!!
+### Built with
+- Semantic HTML5 markup
+- using sass
+- built with bootstrap, javascript
+
+
+<b> 👻👻 HAVE FUN 👻👻 </b>
