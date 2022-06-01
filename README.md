@@ -1,6 +1,6 @@
 # archery-game 🏹
 
-check here [ Live Site ](https://chia-liu.github.io/archery-game/)
+click here [ Live Site ](https://chia-liu.github.io/archery-game/)
 
 ### Screenshot
 
